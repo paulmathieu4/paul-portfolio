@@ -14,7 +14,7 @@
 <AppBar>
     <div class="flex justify-center">
         <a type="button" class="btn preset-gradient-one mx-4" href="/presentation">
-            <span>Who am I ?</span>
+            <span>About me</span>
             <User size={18}/>
         </a>
         <button type="button" class="btn preset-gradient-one mx-4">

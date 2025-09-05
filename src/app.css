@@ -3,10 +3,7 @@
 @import '@skeletonlabs/skeleton';
 @import '@skeletonlabs/skeleton/optional/presets';
 @import '@skeletonlabs/skeleton/themes/vox';
+@import './preset.css';
 
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
 
-.preset-gradient-one {
-    background-image: linear-gradient(45deg, var(--color-primary-500), var(--color-tertiary-500));
-    color: var(--color-primary-contrast-500);
-}
