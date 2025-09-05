@@ -1,26 +1,31 @@
 <script lang="ts">
-	import '../app.css';
-	import favicon from '$lib/assets/favicon.svg';
-	import { AppBar } from '@skeletonlabs/skeleton-svelte';
-	import {ArrowLeft, Calendar, CircleUser, Paperclip} from "lucide-svelte";
+    import '../app.css';
+    import favicon from '$lib/assets/favicon.svg';
+    import {AppBar} from '@skeletonlabs/skeleton-svelte';
+	import {ListCheck, Presentation, User} from "lucide-svelte";
 
-	let { children } = $props();
+    let {children} = $props();
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+    <link rel="icon" href={favicon}/>
 </svelte:head>
 
 <AppBar>
-	{#snippet lead()}
-		<ArrowLeft size={24} />
-	{/snippet}
-	{#snippet trail()}
-		<Paperclip size={20} />
-		<Calendar size={20} />
-		<CircleUser size={20} />
-	{/snippet}
-	<span>Title</span>
+    <div class="flex justify-center">
+        <a type="button" class="btn preset-gradient-one mx-4" href="/presentation">
+            <span>Who am I ?</span>
+            <User size={18}/>
+        </a>
+        <button type="button" class="btn preset-gradient-one mx-4">
+            <span>My skills</span>
+            <ListCheck size={18}/>
+        </button>
+		<button type="button" class="btn preset-gradient-one mx-4">
+			<span>My projects</span>
+			<Presentation size={18}/>
+		</button>
+    </div>
 </AppBar>
 
 {@render children?.()}
